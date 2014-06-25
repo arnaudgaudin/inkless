@@ -734,11 +734,7 @@ body.outlook p {
 //Correctif responsive images pour Firefox uniquement
 // https://github.com/zurb/ink/issues/8
 @-moz-document url-prefix() {
-  //masquage de l'expander car ça pète la mise en page
-  td.expander { display: none; }
-
   @media only screen and (max-width: 660px) {
-    td.expander { display: inherit; }
     table[class="body"] img { width: 100% !important; }
   }
 }
