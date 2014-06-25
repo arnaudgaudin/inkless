@@ -32,6 +32,18 @@
 }
 
 
+// Les Echos Publishing
+// --------------------------------------------------
+
+//Correctif responsive images pour Firefox uniquement
+// https://github.com/zurb/ink/issues/8
+@-moz-document url-prefix() {
+  @media only screen and (max-width: 660px) {
+    table[class="body"] img { width: 100% !important; }
+  }
+}
+
+
 /**********************************************
 * Ink v1.0.5 - Copyright 2013 ZURB Inc        *
 **********************************************/
