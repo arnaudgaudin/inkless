@@ -13,12 +13,25 @@
 @headingsFontWeight:    bold;
 @headingsColor:         inherit;
 
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size
+@headingsFontSizeH1: (@baseFontSize * 2.85);  // ~40px
+@headingsFontSizeH2: (@baseFontSize * 2.55);  // ~36px
+@headingsFontSizeH3: (@baseFontSize * 2.25);  // ~32px
+@headingsFontSizeH4: (@baseFontSize * 2);     // ~28px
+@headingsFontSizeH5: (@baseFontSize * 1.75);  // ~24px
+@headingsFontSizeH6: (@baseFontSize * 1.45);  // ~20px
+
+
 // Grid config
 // --------------------------------------------------
 @columnWidth: 30px;
 @gutterWidth: 20px;
 
 @containerWidth: (11 * @gutterWidth + 12 * @columnWidth);
+
 
 // Width mixins
 // --------------------------------------------------
@@ -383,12 +396,12 @@ h1, h2, h3, h4, h5, h6 {
   word-break: normal;
 }
 
-h1 {font-size: 40px;}
-h2 {font-size: 36px;}
-h3 {font-size: 32px;}
-h4 {font-size: 28px;}
-h5 {font-size: 24px;}
-h6 {font-size: 20px;}
+h1 {font-size: @headingsFontSizeH1;}
+h2 {font-size: @headingsFontSizeH2;}
+h3 {font-size: @headingsFontSizeH3;}
+h4 {font-size: @headingsFontSizeH4;}
+h5 {font-size: @headingsFontSizeH5;}
+h6 {font-size: @headingsFontSizeH6;}
 
 body, table.body, p, td {
   font-family: @baseFontFamily;
