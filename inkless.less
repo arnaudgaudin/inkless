@@ -49,9 +49,14 @@
 
 // Buttons
 // -------------------------
-@btnBackground:         @linkColor;
-@btnBackgroundHover:    @linkColorHover;
-@btnBorder:             #2284a1;
+@btnBackground:               @linkColor;
+@btnBackgroundHover:          darken(@btnBackground, 10%);
+@btnBorder:                   darken(@btnBackground, 20%);
+
+@btnSecondaryBackground:      #E9E9E9;
+@btnSecondaryBackgroundHover: darken(@btnSecondaryBackground, 10%);
+@btnSecondaryBorder:          darken(@btnSecondaryBackground, 10%);
+
 
 
 // Grid config
@@ -632,8 +637,8 @@ table.large-button td a:visited {
 }
 
 table.secondary td {
-  background: #e9e9e9;
-  border-color: #d0d0d0;
+  background: @btnSecondaryBackground;
+  border-color: @btnSecondaryBorder;
   color: #555;
 }
 
@@ -642,7 +647,7 @@ table.secondary td a {
 }
 
 table.secondary:hover td {
-  background: #d0d0d0 !important;
+  background: @btnSecondaryBackgroundHover !important;
   color: #555;
 }
 
