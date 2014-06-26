@@ -17,12 +17,18 @@
 // Component sizing
 // -------------------------
 // Based on 14px font-size
-@headingsFontSizeH1: (@baseFontSize * 2.85);  // ~40px
-@headingsFontSizeH2: (@baseFontSize * 2.55);  // ~36px
-@headingsFontSizeH3: (@baseFontSize * 2.25);  // ~32px
-@headingsFontSizeH4: (@baseFontSize * 2);     // ~28px
-@headingsFontSizeH5: (@baseFontSize * 1.75);  // ~24px
-@headingsFontSizeH6: (@baseFontSize * 1.45);  // ~20px
+
+@buttonFontSizeLarge:   (@baseFontSize * 2);    // ~24px
+@buttonFontSizeMedium:  (@baseFontSize * 1.45); // ~20px
+@buttonFontSizeSmall:   (@baseFontSize * 1.15); // ~16px
+@buttonFontSizeTiny:    (@baseFontSize * 0.85); // ~12px
+
+@headingsFontSizeH1:    (@baseFontSize * 2.85);  // ~40px
+@headingsFontSizeH2:    (@baseFontSize * 2.55);  // ~36px
+@headingsFontSizeH3:    (@baseFontSize * 2.25);  // ~32px
+@headingsFontSizeH4:    (@baseFontSize * 2);     // ~28px
+@headingsFontSizeH5:    (@baseFontSize * 1.75);  // ~24px
+@headingsFontSizeH6:    (@baseFontSize * 1.45);  // ~20px
 
 
 // Grid config
@@ -533,27 +539,27 @@ table.large-button td a {
   text-decoration: none;
   font-family: @baseFontFamily;
   color: #ffffff;
-  font-size: 16px;
+  font-size: @buttonFontSizeSmall;
   display: block;
   height: 100%;
   width: 100%;
 }
 
 table.tiny-button td a {
-  font-size: 12px;
+  font-size: @buttonFontSizeTiny;
   font-weight: normal;
 }
 
 table.small-button td a {
-  font-size: 16px;
+  font-size: @buttonFontSizeSmall;
 }
 
 table.medium-button td a {
-  font-size: 20px;
+  font-size: @buttonFontSizeMedium;
 }
 
 table.large-button td a {
-  font-size: 24px;
+  font-size: @buttonFontSizeLarge;
 }
 
 table.button:hover td,
