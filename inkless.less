@@ -66,6 +66,11 @@
 @btnAlertBorder:          darken(@btnAlertBackground, 20%);
 
 
+// Hr border color
+// -------------------------
+@hrBorder: #d9d9d9;
+
+
 // Grid config
 // --------------------------------------------------
 @columnWidth: 30px;
@@ -194,8 +199,8 @@ table, tr, td {
 }
 
 hr {
-  color: #d9d9d9; 
-  background-color: #d9d9d9; 
+  color: @hrBorder; 
+  background-color: @hrBorder; 
   height: 1px; 
   border: none;
 }
