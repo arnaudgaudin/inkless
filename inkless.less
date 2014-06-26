@@ -47,6 +47,13 @@
 @fontSizeMini:          (@baseFontSize * 0.55);  // ~8px
 
 
+// Buttons
+// -------------------------
+@btnBackground:         @linkColor;
+@btnBackgroundHover:    @linkColorHover;
+@btnBorder:             #2284a1;
+
+
 // Grid config
 // --------------------------------------------------
 @columnWidth: 30px;
@@ -532,8 +539,8 @@ table.large-button td {
   display: block;
   width: auto !important;
   text-align: center;
-  background: @linkColor;
-  border: 1px solid #2284a1;
+  background: @btnBackground;
+  border: 1px solid @btnBorder;
   color: #ffffff;
   padding: 8px 0;
 }
@@ -589,7 +596,7 @@ table.large-button td a {
 table.button:hover td,
 table.button:visited td,
 table.button:active td {
-  background: @linkColorHover !important;
+  background: @btnBackgroundHover !important;
 }
 
 table.button:hover td a,
@@ -603,7 +610,7 @@ table.tiny-button:hover td,
 table.small-button:hover td,
 table.medium-button:hover td,
 table.large-button:hover td {
-  background: @linkColorHover !important;
+  background: @btnBackgroundHover !important;
 }
 
 table.button:hover td a,
