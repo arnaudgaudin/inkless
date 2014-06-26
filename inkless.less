@@ -1,9 +1,89 @@
+// Scaffolding
+// -------------------------
+@bodyBackground:        #ffffff;
+@textColor:             #222222;
+
+
+// Links
+// -------------------------
+@linkColor:             #2ba6cb;
+@linkColorHover:        darken(@linkColor, 10%);
+
+
+// Typography
+// -------------------------
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:          14px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        19px;
+@altFontFamily:         @serifFontFamily;
+
+@headingsFontFamily:    @baseFontFamily;
+@headingsFontWeight:    bold;
+@headingsColor:         inherit;
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size
+
+@buttonFontSizeLarge:   (@baseFontSize * 2);     // ~24px
+@buttonFontSizeMedium:  (@baseFontSize * 1.45);  // ~20px
+@buttonFontSizeSmall:   (@baseFontSize * 1.15);  // ~16px
+@buttonFontSizeTiny:    (@baseFontSize * 0.85);  // ~12px
+
+@headingsFontSizeH1:    (@baseFontSize * 2.85);  // ~40px
+@headingsFontSizeH2:    (@baseFontSize * 2.55);  // ~36px
+@headingsFontSizeH3:    (@baseFontSize * 2.25);  // ~32px
+@headingsFontSizeH4:    (@baseFontSize * 2);     // ~28px
+@headingsFontSizeH5:    (@baseFontSize * 1.75);  // ~24px
+@headingsFontSizeH6:    (@baseFontSize * 1.45);  // ~20px
+
+@fontSizeLarge:         (@baseFontSize * 1.25);  // ~18px
+@fontSizeSmall:         (@baseFontSize * 0.70);  // ~10px
+@fontSizeMini:          (@baseFontSize * 0.55);  // ~8px
+
+
+// Buttons
+// -------------------------
+@btnBackground:               @linkColor;
+@btnBackgroundHover:          darken(@btnBackground, 10%);
+@btnBorder:                   darken(@btnBackground, 20%);
+
+@btnSecondaryBackground:      #E9E9E9;
+@btnSecondaryBackgroundHover: darken(@btnSecondaryBackground, 10%);
+@btnSecondaryBorder:          darken(@btnSecondaryBackground, 10%);
+
+@btnSuccessBackground:      #5da423;
+@btnSuccessBackgroundHover: darken(@btnSuccessBackground, 15%);
+@btnSuccessBorder:          darken(@btnSuccessBackground, 15%);
+
+@btnAlertBackground:      #c60f13;
+@btnAlertBackgroundHover: darken(@btnAlertBackground, 20%);
+@btnAlertBorder:          darken(@btnAlertBackground, 20%);
+
+
+// Panels
+// -------------------------
+@panelBackground: #f2f2f2;
+@panelBorder: #d9d9d9;
+
+
+// Hr border color
+// -------------------------
+@hrBorder: #d9d9d9;
+
+
 // Grid config
 // --------------------------------------------------
 @columnWidth: 30px;
 @gutterWidth: 20px;
 
-@containerWidth: 11 * @gutterWidth + 12 * @columnWidth;
+@containerWidth: (11 * @gutterWidth + 12 * @columnWidth);
+
 
 // Width mixins
 // --------------------------------------------------
@@ -29,6 +109,14 @@
 
 .xUp(@widthInColumns) {
     width: floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0);
+}
+
+
+/**********************************************
+* Inkless - Addons                            *
+**********************************************/
+body, table.body {
+  background-color: @bodyBackground;
 }
 
 
@@ -117,8 +205,8 @@ table, tr, td {
 }
 
 hr {
-  color: #d9d9d9; 
-  background-color: #d9d9d9; 
+  color: @hrBorder; 
+  background-color: @hrBorder; 
   height: 1px; 
   border: none;
 }
@@ -354,9 +442,7 @@ img.center {
 /* Typography */
 
 body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
-  color: #222222;
-  font-family: "Helvetica", "Arial", sans-serif; 
-  font-weight: normal; 
+  color: @textColor;
   padding:0; 
   margin: 0;
   text-align: left; 
@@ -364,20 +450,29 @@ body, table.body, h1, h2, h3, h4, h5, h6, p, td {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  color: @headingsColor;
   word-break: normal;
 }
 
-h1 {font-size: 40px;}
-h2 {font-size: 36px;}
-h3 {font-size: 32px;}
-h4 {font-size: 28px;}
-h5 {font-size: 24px;}
-h6 {font-size: 20px;}
-body, table.body, p, td {font-size: 14px;line-height:19px;}
+h1 {font-size: @headingsFontSizeH1;}
+h2 {font-size: @headingsFontSizeH2;}
+h3 {font-size: @headingsFontSizeH3;}
+h4 {font-size: @headingsFontSizeH4;}
+h5 {font-size: @headingsFontSizeH5;}
+h6 {font-size: @headingsFontSizeH6;}
+
+body, table.body, p, td {
+  font-family: @baseFontFamily;
+  font-weight: normal;
+  font-size: @baseFontSize;
+  line-height:@baseLineHeight;
+}
 
 p.lead, p.lede, p.leed {
-  font-size: 18px;
-  line-height:21px;
+  font-size: @fontSizeLarge;
+  line-height: (@fontSizeLarge * 1.15);
 }
 
 p { 
@@ -385,24 +480,24 @@ p {
 }
 
 small {
-  font-size: 10px;
+  font-size: @fontSizeSmall;
 }
 
 a {
-  color: #2ba6cb; 
+  color: @linkColor; 
   text-decoration: none;
 }
 
 a:hover { 
-  color: #2795b6 !important;
+  color: @linkColorHover !important;
 }
 
 a:active { 
-  color: #2795b6 !important;
+  color: @linkColorHover !important;
 }
 
 a:visited { 
-  color: #2ba6cb !important;
+  color: @linkColor !important;
 }
 
 h1 a, 
@@ -411,7 +506,7 @@ h3 a,
 h4 a, 
 h5 a, 
 h6 a {
-  color: #2ba6cb;
+  color: @linkColor;
 }
 
 h1 a:active, 
@@ -420,7 +515,7 @@ h3 a:active,
 h4 a:active, 
 h5 a:active, 
 h6 a:active { 
-  color: #2ba6cb !important; 
+  color: @linkColor !important; 
 } 
 
 h1 a:visited, 
@@ -429,14 +524,14 @@ h3 a:visited,
 h4 a:visited, 
 h5 a:visited, 
 h6 a:visited { 
-  color: #2ba6cb !important; 
+  color: @linkColor !important; 
 } 
 
 /* Panels */
 
 .panel {
-  background: #f2f2f2;
-  border: 1px solid #d9d9d9;
+  background: @panelBackground;
+  border: 1px solid @panelBorder;
   padding: 10px !important;
 }
 
@@ -467,8 +562,8 @@ table.large-button td {
   display: block;
   width: auto !important;
   text-align: center;
-  background: #2ba6cb;
-  border: 1px solid #2284a1;
+  background: @btnBackground;
+  border: 1px solid @btnBorder;
   color: #ffffff;
   padding: 8px 0;
 }
@@ -496,35 +591,35 @@ table.medium-button td a,
 table.large-button td a {
   font-weight: bold;
   text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: @baseFontFamily;
   color: #ffffff;
-  font-size: 16px;
+  font-size: @buttonFontSizeSmall;
   display: block;
   height: 100%;
   width: 100%;
 }
 
 table.tiny-button td a {
-  font-size: 12px;
+  font-size: @buttonFontSizeTiny;
   font-weight: normal;
 }
 
 table.small-button td a {
-  font-size: 16px;
+  font-size: @buttonFontSizeSmall;
 }
 
 table.medium-button td a {
-  font-size: 20px;
+  font-size: @buttonFontSizeMedium;
 }
 
 table.large-button td a {
-  font-size: 24px;
+  font-size: @buttonFontSizeLarge;
 }
 
 table.button:hover td,
 table.button:visited td,
 table.button:active td {
-  background: #2795b6 !important;
+  background: @btnBackgroundHover !important;
 }
 
 table.button:hover td a,
@@ -538,7 +633,7 @@ table.tiny-button:hover td,
 table.small-button:hover td,
 table.medium-button:hover td,
 table.large-button:hover td {
-  background: #2795b6 !important;
+  background: @btnBackgroundHover !important;
 }
 
 table.button:hover td a,
@@ -560,8 +655,8 @@ table.large-button td a:visited {
 }
 
 table.secondary td {
-  background: #e9e9e9;
-  border-color: #d0d0d0;
+  background: @btnSecondaryBackground;
+  border-color: @btnSecondaryBorder;
   color: #555;
 }
 
@@ -570,7 +665,7 @@ table.secondary td a {
 }
 
 table.secondary:hover td {
-  background: #d0d0d0 !important;
+  background: @btnSecondaryBackgroundHover !important;
   color: #555;
 }
 
@@ -581,21 +676,21 @@ table.secondary:active td a {
 }
 
 table.success td {
-  background: #5da423;
-  border-color: #457a1a;
+  background: @btnSuccessBackground;
+  border-color: @btnSuccessBorder;
 }
 
 table.success:hover td {
-  background: #457a1a !important;
+  background: @btnSuccessBackgroundHover !important;
 }
 
 table.alert td {
-  background: #c60f13;
-  border-color: #970b0e;
+  background: @btnAlertBackground;
+  border-color: @btnAlertBorder;
 }
 
 table.alert:hover td {
-  background: #970b0e !important;
+  background: @btnAlertBackgroundHover !important;
 }
 
 table.radius td {
