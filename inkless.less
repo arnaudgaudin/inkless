@@ -1,13 +1,17 @@
 // Typography
 // -------------------------
-@sansFontFamily:    "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:   Georgia, "Times New Roman", Times, serif;
-@monoFontFamily:    Monaco, Menlo, Consolas, "Courier New", monospace;
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:      14px;
-@baseFontFamily:    @sansFontFamily;
-@baseLineHeight:    19px;
-@altFontFamily:     @serifFontFamily;
+@baseFontSize:          14px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        19px;
+@altFontFamily:         @serifFontFamily;
+
+@headingsFontFamily:    @baseFontFamily;
+@headingsFontWeight:    bold;
+@headingsColor:         inherit;
 
 // Grid config
 // --------------------------------------------------
@@ -366,8 +370,6 @@ img.center {
 
 body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
   color: #222222;
-  font-family: @baseFontFamily; 
-  font-weight: normal; 
   padding:0; 
   margin: 0;
   text-align: left; 
@@ -375,6 +377,9 @@ body, table.body, h1, h2, h3, h4, h5, h6, p, td {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  color: @headingsColor;
   word-break: normal;
 }
 
@@ -384,7 +389,13 @@ h3 {font-size: 32px;}
 h4 {font-size: 28px;}
 h5 {font-size: 24px;}
 h6 {font-size: 20px;}
-body, table.body, p, td {font-size: @baseFontSize;line-height:@baseLineHeight;}
+
+body, table.body, p, td {
+  font-family: @baseFontFamily;
+  font-weight: normal;
+  font-size: @baseFontSize;
+  line-height:@baseLineHeight;
+}
 
 p.lead, p.lede, p.leed {
   font-size: 18px;
