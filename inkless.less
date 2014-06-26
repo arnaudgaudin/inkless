@@ -1,3 +1,9 @@
+// Scaffolding
+// -------------------------
+@bodyBackground:        #ffffff;
+@textColor:             #222222;
+
+
 // Typography
 // -------------------------
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -67,6 +73,14 @@
 
 .xUp(@widthInColumns) {
     width: floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0);
+}
+
+
+/**********************************************
+* Inkless - Addons                            *
+**********************************************/
+body, table.body {
+  background-color: @bodyBackground;
 }
 
 
@@ -392,7 +406,7 @@ img.center {
 /* Typography */
 
 body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
-  color: #222222;
+  color: @textColor;
   padding:0; 
   margin: 0;
   text-align: left; 
