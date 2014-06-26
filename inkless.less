@@ -4,6 +4,12 @@
 @textColor:             #222222;
 
 
+// Links
+// -------------------------
+@linkColor:             #2ba6cb;
+@linkColorHover:        darken(@linkColor, 10%);
+
+
 // Typography
 // -------------------------
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -448,20 +454,20 @@ small {
 }
 
 a {
-  color: #2ba6cb; 
+  color: @linkColor; 
   text-decoration: none;
 }
 
 a:hover { 
-  color: #2795b6 !important;
+  color: @linkColorHover !important;
 }
 
 a:active { 
-  color: #2795b6 !important;
+  color: @linkColorHover !important;
 }
 
 a:visited { 
-  color: #2ba6cb !important;
+  color: @linkColor !important;
 }
 
 h1 a, 
@@ -470,7 +476,7 @@ h3 a,
 h4 a, 
 h5 a, 
 h6 a {
-  color: #2ba6cb;
+  color: @linkColor;
 }
 
 h1 a:active, 
@@ -479,7 +485,7 @@ h3 a:active,
 h4 a:active, 
 h5 a:active, 
 h6 a:active { 
-  color: #2ba6cb !important; 
+  color: @linkColor !important; 
 } 
 
 h1 a:visited, 
@@ -488,7 +494,7 @@ h3 a:visited,
 h4 a:visited, 
 h5 a:visited, 
 h6 a:visited { 
-  color: #2ba6cb !important; 
+  color: @linkColor !important; 
 } 
 
 /* Panels */
@@ -526,7 +532,7 @@ table.large-button td {
   display: block;
   width: auto !important;
   text-align: center;
-  background: #2ba6cb;
+  background: @linkColor;
   border: 1px solid #2284a1;
   color: #ffffff;
   padding: 8px 0;
@@ -583,7 +589,7 @@ table.large-button td a {
 table.button:hover td,
 table.button:visited td,
 table.button:active td {
-  background: #2795b6 !important;
+  background: @linkColorHover !important;
 }
 
 table.button:hover td a,
@@ -597,7 +603,7 @@ table.tiny-button:hover td,
 table.small-button:hover td,
 table.medium-button:hover td,
 table.large-button:hover td {
-  background: #2795b6 !important;
+  background: @linkColorHover !important;
 }
 
 table.button:hover td a,
