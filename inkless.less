@@ -18,10 +18,10 @@
 // -------------------------
 // Based on 14px font-size
 
-@buttonFontSizeLarge:   (@baseFontSize * 2);    // ~24px
-@buttonFontSizeMedium:  (@baseFontSize * 1.45); // ~20px
-@buttonFontSizeSmall:   (@baseFontSize * 1.15); // ~16px
-@buttonFontSizeTiny:    (@baseFontSize * 0.85); // ~12px
+@buttonFontSizeLarge:   (@baseFontSize * 2);     // ~24px
+@buttonFontSizeMedium:  (@baseFontSize * 1.45);  // ~20px
+@buttonFontSizeSmall:   (@baseFontSize * 1.15);  // ~16px
+@buttonFontSizeTiny:    (@baseFontSize * 0.85);  // ~12px
 
 @headingsFontSizeH1:    (@baseFontSize * 2.85);  // ~40px
 @headingsFontSizeH2:    (@baseFontSize * 2.55);  // ~36px
@@ -29,6 +29,10 @@
 @headingsFontSizeH4:    (@baseFontSize * 2);     // ~28px
 @headingsFontSizeH5:    (@baseFontSize * 1.75);  // ~24px
 @headingsFontSizeH6:    (@baseFontSize * 1.45);  // ~20px
+
+@fontSizeLarge:         (@baseFontSize * 1.25);  // ~18px
+@fontSizeSmall:         (@baseFontSize * 0.70);  // ~10px
+@fontSizeMini:          (@baseFontSize * 0.55);  // ~8px
 
 
 // Grid config
@@ -417,8 +421,8 @@ body, table.body, p, td {
 }
 
 p.lead, p.lede, p.leed {
-  font-size: 18px;
-  line-height:21px;
+  font-size: @fontSizeLarge;
+  line-height: (@fontSizeLarge * 1.15);
 }
 
 p { 
@@ -426,7 +430,7 @@ p {
 }
 
 small {
-  font-size: 10px;
+  font-size: @fontSizeSmall;
 }
 
 a {
