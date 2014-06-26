@@ -57,6 +57,13 @@
 @btnSecondaryBackgroundHover: darken(@btnSecondaryBackground, 10%);
 @btnSecondaryBorder:          darken(@btnSecondaryBackground, 10%);
 
+@btnSuccessBackground:      #5da423;
+@btnSuccessBackgroundHover: darken(@btnSuccessBackground, 15%);
+@btnSuccessBorder:          darken(@btnSuccessBackground, 15%);
+
+@btnAlertBackground:      #c60f13;
+@btnAlertBackgroundHover: darken(@btnAlertBackground, 20%);
+@btnAlertBorder:          darken(@btnAlertBackground, 20%);
 
 
 // Grid config
@@ -658,21 +665,21 @@ table.secondary:active td a {
 }
 
 table.success td {
-  background: #5da423;
-  border-color: #457a1a;
+  background: @btnSuccessBackground;
+  border-color: @btnSuccessBorder;
 }
 
 table.success:hover td {
-  background: #457a1a !important;
+  background: @btnSuccessBackgroundHover !important;
 }
 
 table.alert td {
-  background: #c60f13;
-  border-color: #970b0e;
+  background: @btnAlertBackground;
+  border-color: @btnAlertBorder;
 }
 
 table.alert:hover td {
-  background: #970b0e !important;
+  background: @btnAlertBackgroundHover !important;
 }
 
 table.radius td {
