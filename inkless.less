@@ -833,3 +833,21 @@ body.outlook p {
     table[class="body"] img { width: 100% !important; }
   }
 }
+
+//Liens en block
+a.link_box {
+  display: block;
+  &, &:link, &:visited, &:hover, &:focus, &:active {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+//Liens soulignés par défaut
+a.link_underline {
+  text-decoration: underline;
+  &:hover, &:focus {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
