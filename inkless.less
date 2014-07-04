@@ -831,6 +831,14 @@ body.outlook p {
 // http://blog.room34.com/archives/5042
 table { table-layout: fixed; }
 
+//Liens automatiques rajoutés par Apple
+.appleLinks {
+  color: @linkColor; 
+  text-decoration: none;
+  &:hover, &:active { color: @linkColorHover !important; }
+  &:visited { color: @linkColor !important; }
+}
+
 //Liens en block
 a.link_box {
   display: block;
