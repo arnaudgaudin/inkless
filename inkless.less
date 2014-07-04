@@ -839,6 +839,12 @@ table { table-layout: fixed; }
   &:visited { color: @linkColor !important; }
 }
 
+// Disable Safari Mobile phone color
+a[href^=tel] {
+  color:inherit;
+  text-decoration:none;
+}
+
 //Liens en block
 a.link_box {
   display: block;
