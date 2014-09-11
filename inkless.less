@@ -719,6 +719,11 @@ body.outlook p {
     width: auto !important;
     height: auto !important;
   }
+  
+  //Debuggage Firefox uniquement
+  @-moz-document url-prefix() {
+    table[class="body"] img { width: 100% !important; }
+  }
 
   table[class="body"] center {
     min-width: 0 !important;
@@ -829,6 +834,7 @@ body.outlook p {
 //Correctif responsive images dans tableaux
 // https://github.com/zurb/ink/issues/8
 // http://blog.room34.com/archives/5042
+// voir ligne 724
 table { table-layout: fixed; }
 
 //Liens automatiques rajoutés par Apple
