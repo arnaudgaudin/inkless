@@ -868,3 +868,65 @@ a.link_underline {
     cursor: pointer;
   }
 }
+
+//Débuggage Lotus Notes
+.columnWidth(@widthInColumns) {
+    width: (@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth;
+     & > tr > td:not(.expander) { -premailer-width: (@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth; }
+}
+
+.xUp(@widthInColumns) {
+    width: floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0);
+    -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
+}
+
+
+table {
+  -premailer-cellpadding: 0;
+  -premailer-cellspacing: 0;
+}
+
+table.row { -premailer-width: 100%; }
+
+table.body {
+  -premailer-height: 100%;
+  -premailer-width: 100%;
+}
+
+.block-grid { -premailer-width: 100%; }
+
+.body .columns td.one,
+.body .column td.one { -premailer-width: 8.333333%; }
+.body .columns td.two,
+.body .column td.two { -premailer-width: 16.666666%; }
+.body .columns td.three,
+.body .column td.three { -premailer-width: 25%; }
+.body .columns td.four,
+.body .column td.four { -premailer-width: 33.333333%; }
+.body .columns td.five,
+.body .column td.five { -premailer-width: 41.666666%; }
+.body .columns td.six,
+.body .column td.six { -premailer-width: 50%; }
+.body .columns td.seven,
+.body .column td.seven { -premailer-width: 58.333333%; }
+.body .columns td.eight,
+.body .column td.eight { -premailer-width: 66.666666%; }
+.body .columns td.nine,
+.body .column td.nine { -premailer-width: 75%; }
+.body .columns td.ten,
+.body .column td.ten { -premailer-width: 83.333333%; }
+.body .columns td.eleven,
+.body .column td.eleven { -premailer-width: 91.666666%; }
+.body .columns td.twelve,
+.body .column td.twelve { -premailer-width: 100%; }
+
+.sub-grid table { -premailer-width: 100%; }
+
+table.button,
+table.tiny-button,
+table.small-button,
+table.medium-button,
+table.large-button {
+  -premailer-width: 100%;
+  td { -premailer-width: auto; }
+}
