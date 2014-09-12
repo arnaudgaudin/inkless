@@ -830,7 +830,10 @@ body.outlook p {
 // https://github.com/zurb/ink/issues/8
 // http://blog.room34.com/archives/5042
 // voir ligne 724
-table { table-layout: fixed; }
+//Debuggage Firefox uniquement
+@-moz-document url-prefix() {
+  table { table-layout: fixed; }
+}
 
 //Liens automatiques rajoutés par Apple
 .appleLinks a {
