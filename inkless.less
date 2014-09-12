@@ -871,13 +871,11 @@ a.link_underline {
 
 //Débuggage Lotus Notes
 .columnWidth(@widthInColumns) {
-    width: (@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth;
-     & > tr > td:not(.expander) { -premailer-width: (@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth; }
+  & > tr > td:not(.expander) { -premailer-width: unit((@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth); }
 }
 
 .xUp(@widthInColumns) {
-    width: floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0);
-    -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
+  -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
 }
 
 
