@@ -720,11 +720,6 @@ body.outlook p {
     height: auto !important;
   }
   
-  //Debuggage Firefox uniquement
-  @-moz-document url-prefix() {
-    table[class="body"] img { width: 100% !important; }
-  }
-
   table[class="body"] center {
     min-width: 0 !important;
   }
@@ -870,18 +865,18 @@ a.link_underline {
 }
 
 //Débuggage Lotus Notes
-.columnWidth(@widthInColumns) {
-  & > tr > td:not(.expander) { -premailer-width: unit((@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth); }
-}
+// .columnWidth(@widthInColumns) {
+//   & > tr > td:not(.expander) { -premailer-width: unit((@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth); }
+// }
 
-.xUp(@widthInColumns) {
-  -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
-}
-
+// .xUp(@widthInColumns) {
+//   -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
+// }
 
 table {
   -premailer-cellpadding: 0;
   -premailer-cellspacing: 0;
+  empty-cells:hide;
 }
 
 table.row { -premailer-width: 100%; }
@@ -918,6 +913,8 @@ table.body {
 .body .columns td.twelve,
 .body .column td.twelve { -premailer-width: 100%; }
 
+td.expander { -premailer-width: 1; }
+
 .sub-grid table { -premailer-width: 100%; }
 
 table.button,
@@ -927,4 +924,11 @@ table.medium-button,
 table.large-button {
   -premailer-width: 100%;
   td { -premailer-width: auto; }
+}
+
+@media only screen and (max-width: (@containerWidth + @gutterWidth)) {
+  //Debuggage Firefox uniquement
+  @-moz-document url-prefix() {
+    table[class="body"] img { width: 100% !important; }
+  }
 }
