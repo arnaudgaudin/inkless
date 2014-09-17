@@ -835,6 +835,12 @@ body.outlook p {
 //Debuggage Firefox uniquement
 @-moz-document url-prefix() {
   table { table-layout: fixed; }
+  @media only screen and (max-width: (@containerWidth + @gutterWidth)) {
+    table[class="body"] .wrapper .columns,
+    table[class="body"] .wrapper .column {
+      display: table !important;
+    }
+  }
 }
 
 //Liens automatiques rajoutés par Apple
