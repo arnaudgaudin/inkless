@@ -822,6 +822,11 @@ body.outlook p {
   table[class="body"] .hide-for-desktop {
     display: inherit !important;
   }
+  
+  // Block-Grid Column Progressive Enhancement
+  table[class="container"] .block-grid td {
+    width: 100% !important;
+  }
 }
 
 
@@ -876,9 +881,9 @@ a.link_disabled {
   -premailer-width: unit((@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth);
 }
 
-// .xUp(@widthInColumns) {
-//   -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
-// }
+.xUp(@widthInColumns) {
+  -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
+}
 
 table {
   -premailer-cellpadding: 0;
