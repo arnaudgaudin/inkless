@@ -872,9 +872,9 @@ a.link_disabled {
 }
 
 //Débuggage Lotus Notes
-// .columnWidth(@widthInColumns) {
-//   & > tr > td:not(.expander) { -premailer-width: unit((@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth); }
-// }
+.columnWidth(@widthInColumns) {
+  -premailer-width: unit((@widthInColumns - 1) * @gutterWidth + @widthInColumns * @columnWidth);
+}
 
 // .xUp(@widthInColumns) {
 //   -premailer-width: unit(floor((@containerWidth - @widthInColumns * @gutterWidth) / @widthInColumns, 0));
