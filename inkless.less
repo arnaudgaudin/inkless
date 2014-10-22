@@ -88,6 +88,7 @@
 // Padding config
 // --------------------------------------------------
 @textPad: 10px;
+@textPadCollapse: @textPad;
 
 
 // Width mixins
@@ -807,14 +808,19 @@ body.outlook p {
     width: 1px !important;
   }
 
+  table[class="body"] .text-pad {
+    padding-left: @textPadCollapse !important;
+    padding-right: @textPadCollapse !important;
+  }
+
   table[class="body"] .right-text-pad,
   table[class="body"] .text-pad-right {
-    padding-left: @textPad !important;
+    padding-left: @textPadCollapse !important;
   }
 
   table[class="body"] .left-text-pad,
   table[class="body"] .text-pad-left {
-    padding-right: @textPad !important;
+    padding-right: @textPadCollapse !important;
   }
 
   table[class="body"] .hide-for-small,
