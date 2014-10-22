@@ -85,6 +85,10 @@
 
 @containerWidth: (11 * @gutterWidth + 12 * @columnWidth);
 
+// Padding config
+// --------------------------------------------------
+@textPad: 10px;
+
 
 // Width mixins
 // --------------------------------------------------
@@ -351,22 +355,22 @@ td.expander {
 
 table.columns .text-pad,
 table.column .text-pad {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: @textPad;
+  padding-right: @textPad;
 }
 
 table.columns .left-text-pad,
 table.columns .text-pad-left,
 table.column .left-text-pad,
 table.column .text-pad-left {
-  padding-left: 10px;
+  padding-left: @textPad;
 }
 
 table.columns .right-text-pad,
 table.columns .text-pad-right,
 table.column .right-text-pad,
 table.column .text-pad-right {
-  padding-right: 10px;
+  padding-right: @textPad;
 }
 
 /* Block Grid */
@@ -805,12 +809,12 @@ body.outlook p {
 
   table[class="body"] .right-text-pad,
   table[class="body"] .text-pad-right {
-    padding-left: 10px !important;
+    padding-left: @textPad !important;
   }
 
   table[class="body"] .left-text-pad,
   table[class="body"] .text-pad-left {
-    padding-right: 10px !important;
+    padding-right: @textPad !important;
   }
 
   table[class="body"] .hide-for-small,
