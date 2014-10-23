@@ -90,6 +90,8 @@
 @wrapperPad: 10px;
 @columnPad: 10px;
 @subColumnPad: 10px;
+@blockGridPad: 10px;
+@panelPad: 10px;
 
 @textPad: 10px;
 @textPadCollapse: @textPad;
@@ -388,7 +390,7 @@ table.column .text-pad-right {
 
 .block-grid td {
   display: inline-block;
-  padding:10px;
+  padding: @blockGridPad;
 }
 
 .two-up td {
@@ -544,7 +546,7 @@ h6 a:visited {
 .panel {
   background: @panelBackground;
   border: 1px solid @panelBorder;
-  padding: 10px !important;
+  padding: @panelPad !important;
 }
 
 .sub-grid table {
