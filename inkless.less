@@ -87,6 +87,10 @@
 
 // Padding config
 // --------------------------------------------------
+@wrapperPad: 10px;
+@columnPad: 10px;
+@subColumnPad: 10px;
+
 @textPad: 10px;
 @textPadCollapse: @textPad;
 
@@ -243,7 +247,7 @@ table.container table.row {
 }
 
 td.wrapper {
-  padding: 10px @gutterWidth 0px 0px;
+  padding: @wrapperPad @gutterWidth 0px 0px;
   position: relative;
 }
 
@@ -254,14 +258,14 @@ table.column {
 
 table.columns td,
 table.column td {
-  padding: 0px 0px 10px; 
+  padding: 0px 0px @columnPad; 
 }
 
 table.columns td.sub-columns,
 table.column td.sub-columns,
 table.columns td.sub-column,
 table.column td.sub-column {
-  padding-right: 10px;
+  padding-right: @subColumnPad;
 }
 
 td.sub-column, td.sub-columns {
