@@ -89,12 +89,10 @@
 // --------------------------------------------------
 @wrapperPad: 10px;
 @columnPad: @wrapperPad;
-@subColumnPad: @wrapperPad;
 @blockGridPad: @wrapperPad;
 @panelPad: @wrapperPad;
 @textPad: @wrapperPad;
 @textPadCollapse: @textPad;
-
 
 // Width mixins
 // --------------------------------------------------
@@ -266,7 +264,7 @@ table.columns td.sub-columns,
 table.column td.sub-columns,
 table.columns td.sub-column,
 table.column td.sub-column {
-  padding-right: @subColumnPad;
+  padding-right: @gutterWidth;
 }
 
 td.sub-column, td.sub-columns {
