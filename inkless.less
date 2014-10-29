@@ -764,7 +764,7 @@ body.outlook p {
   table[class="body"] .wrapper {
     position: relative !important;
     display: block !important;
-    padding-top: @wrapperPadCollapse !important;
+    .compareProperty(padding-top, @wrapperPad, @wrapperPadCollapse) !important;
     padding-right: 0 !important;
   }
 
@@ -786,7 +786,7 @@ body.outlook p {
   table[class="body"] table.columns td,
   table[class="body"] table.column td {
     width: 100% !important;
-    padding-bottom: @columnPadCollapse !important;
+    .compareProperty(padding-bottom, @columnPad, @columnPadCollapse) !important;
   }
 
   table[class="body"] .columns td.one,
@@ -833,19 +833,19 @@ body.outlook p {
   }
 
   table[class="body"] .text-pad {
-    padding-left: @textPadCollapse !important;
-    padding-right: @textPadCollapse !important;
+    .compareProperty(padding-left, @textPad, @textPadCollapse) !important;
+    .compareProperty(padding-right, @textPad, @textPadCollapse) !important;
   }
 
   table[class="body"] .right-text-pad,
   table[class="body"] .text-pad-right {
     padding-left: @textPadCollapse !important;
-    padding-right: @textPadCollapse !important;
+    .compareProperty(padding-right, @textPad, @textPadCollapse) !important;
   }
 
   table[class="body"] .left-text-pad,
   table[class="body"] .text-pad-left {
-    padding-left: @textPadCollapse !important;
+    .compareProperty(padding-left, @textPad, @textPadCollapse) !important;
     padding-right: @textPadCollapse !important;
   }
 
@@ -862,12 +862,12 @@ body.outlook p {
   // Block-Grid Column Progressive Enhancement
   table[class="container"] .block-grid td {
     width: 100% !important;
-    padding: @blockGridPadCollapse !important;
+    .compareProperty(padding, @blockGridPad, @blockGridPadCollapse) !important;
   }
   
   // Override Panel padding
   table[class="container"] .panel {
-    padding: @panelPadCollapse !important;
+    .compareProperty(padding, @panelPad, @panelPadCollapse) !important;
   }
 }
 
