@@ -102,6 +102,14 @@
 @textPad: @wrapperPad;
 @textPadCollapse: @textPad;
 
+// Parametric property mixin
+// --------------------------------------------------
+
+//affect value2 to specified property only if different from value1
+.compareProperty(@property, @value1, @value2) when not(@value1 = @value2) {
+  @{property}: @value2;
+}
+
 // Width mixins
 // --------------------------------------------------
 .columnWidth(@widthInColumns) {
