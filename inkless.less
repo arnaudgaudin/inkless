@@ -756,6 +756,7 @@ body.outlook p {
   table[class="body"] .wrapper {
     position: relative !important;
     display: block !important;
+    padding-top: @wrapperPadCollapse !important;
     padding-right: 0 !important;
   }
 
@@ -777,6 +778,7 @@ body.outlook p {
   table[class="body"] table.columns td,
   table[class="body"] table.column td {
     width: 100% !important;
+    padding-bottom: @columnPadCollapse !important;
   }
 
   table[class="body"] .columns td.one,
@@ -852,6 +854,12 @@ body.outlook p {
   // Block-Grid Column Progressive Enhancement
   table[class="container"] .block-grid td {
     width: 100% !important;
+    padding: @blockGridPadCollapse !important;
+  }
+  
+  // Override Panel padding
+  table[class="container"] .panel {
+    padding: @panelPadCollapse !important;
   }
 }
 
