@@ -906,7 +906,8 @@ a.link_box {
 
 //Liens soulignés par défaut
 a.link_underline {
-  &, .important { text-decoration: underline; }
+  text-decoration: underline;
+  .important { text-decoration: underline !important; }
   &:hover, &:focus {
     text-decoration: underline;
     cursor: pointer;
