@@ -149,7 +149,7 @@ body, table.body {
 * Ink v1.0.5 - Copyright 2013 ZURB Inc        *
 **********************************************/
 
-/* Client-specific Styles & Reset */
+/* Client-specific Styles and Reset */
 
 #outlook a { 
   padding:0; 
@@ -222,13 +222,13 @@ table {
   mso-table-rspace:0pt;
 }
 
-td { 
+td {
   word-break: break-word;
-  // -webkit-hyphens: auto;
-  // -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  border-collapse: collapse !important; 
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  border-collapse: collapse !important;
 }
 
 table, tr, td {
@@ -441,7 +441,7 @@ table.column .text-pad-right {
   .xUp(8);
 }
 
-/* Alignment & Visibility Classes */
+/* Alignment and Visibility Classes */
 
 table.center, td.center {
   text-align: center;
@@ -471,6 +471,14 @@ img.center {
 .show-for-small,
 .hide-for-desktop {
   display: none;
+  width:0;
+  mso-hide:all;
+  overflow:hidden;
+}
+
+.show-for-small *,
+.hide-for-desktop * {
+  mso-hide:all;
 }
 
 /* Typography */
@@ -600,22 +608,23 @@ table.large-button td {
   border: 1px solid @btnBorder;
   color: #ffffff;
   padding: 8px 0;
+  line-height: initial !important;
 }
 
 table.tiny-button td {
-  padding: 5px 0 4px;
+  padding: 5px 0;
 }
 
 table.small-button td {
-  padding: 8px 0 7px;
+  padding: 8px 0;
 }
 
 table.medium-button td {
-  padding: 12px 0 10px;
+  padding: 12px 0;
 }
 
 table.large-button td {
-  padding: 21px 0 18px;
+  padding: 21px 0;
 }
 
 table.button td a,
@@ -659,7 +668,7 @@ table.button:active td {
 table.button:hover td a,
 table.button:visited td a,
 table.button:active td a {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 table.button:hover td,
@@ -691,22 +700,22 @@ table.large-button td a:visited {
 table.secondary td {
   background: @btnSecondaryBackground;
   border-color: @btnSecondaryBorder;
-  color: #555;
+  color: #555555;
 }
 
 table.secondary td a {
-  color: #555;
+  color: #555555;
 }
 
 table.secondary:hover td {
   background: @btnSecondaryBackgroundHover !important;
-  color: #555;
+  color: #555555;
 }
 
 table.secondary:hover td a,
 table.secondary td a:visited,
 table.secondary:active td a {
-  color: #555 !important;
+  color: #555555 !important;
 }
 
 table.success td {
@@ -750,8 +759,8 @@ body.outlook p {
 @media only screen and (max-width: (@containerWidth + @gutterWidth)) {
 
   table[class="body"] img {
-    width: auto !important;
-    height: auto !important;
+    max-width: auto !important;
+    max-height: auto !important;
   }
   
   table[class="body"] center {
@@ -863,7 +872,9 @@ body.outlook p {
 
   table[class="body"] .show-for-small,
   table[class="body"] .hide-for-desktop {
-    display: inherit !important;
+    display : block !important;
+    width : auto !important;
+    overflow : visible !important;
   }
   
   // Block-Grid Column Progressive Enhancement
