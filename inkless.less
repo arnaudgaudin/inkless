@@ -934,9 +934,14 @@ a.link_underline {
 
 //Liens désactivés
 a.link_disabled {
-  pointer-events: none !important;
-  cursor: default !important;
-  text-decoration: none !important;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  .important {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important;
+  }
 }
 
 //Débuggage Lotus Notes
