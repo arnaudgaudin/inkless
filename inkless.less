@@ -899,6 +899,13 @@ body.outlook p {
 // https://github.com/zurb/ink/issues/8
 // http://blog.room34.com/archives/5042
 
+//utiliser pour première phrase introductive visible dans Outlook
+.hidden {
+  display: none;
+  visibility: hidden;
+  &, * { mso-hide: all; }
+}
+
 //Liens automatiques rajoutés par Apple
 .appleLinks a {
   color: @linkColor; 
