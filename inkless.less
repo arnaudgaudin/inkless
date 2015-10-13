@@ -53,18 +53,22 @@
 @btnBackground:               @linkColor;
 @btnBackgroundHover:          darken(@btnBackground, 10%);
 @btnBorder:                   darken(@btnBackground, 20%);
+@btnColor:                    #ffffff;
 
 @btnSecondaryBackground:      #E9E9E9;
 @btnSecondaryBackgroundHover: darken(@btnSecondaryBackground, 10%);
 @btnSecondaryBorder:          darken(@btnSecondaryBackground, 10%);
+@btnSecondaryColor:           #555555;
 
 @btnSuccessBackground:      #5da423;
 @btnSuccessBackgroundHover: darken(@btnSuccessBackground, 15%);
 @btnSuccessBorder:          darken(@btnSuccessBackground, 15%);
+@btnSuccessColor:           #ffffff;
 
 @btnAlertBackground:      #c60f13;
 @btnAlertBackgroundHover: darken(@btnAlertBackground, 20%);
 @btnAlertBorder:          darken(@btnAlertBackground, 20%);
+@btnAlertColor:           #ffffff;
 
 
 // Panels
@@ -606,7 +610,7 @@ table.large-button td {
   text-align: center;
   background: @btnBackground;
   border: 1px solid @btnBorder;
-  color: #ffffff;
+  color: @btnColor;
   padding: 8px 0;
   line-height: initial !important;
 }
@@ -668,7 +672,7 @@ table.button:active td {
 table.button:hover td a,
 table.button:visited td a,
 table.button:active td a {
-  color: #ffffff !important;
+  color: @btnColor !important;
 }
 
 table.button:hover td,
@@ -694,28 +698,28 @@ table.medium-button td a:visited,
 table.large-button:hover td a,
 table.large-button:active td a,
 table.large-button td a:visited {
-  color: #ffffff !important;
+  color: @btnColor !important;
 }
 
 table.secondary td {
   background: @btnSecondaryBackground;
   border-color: @btnSecondaryBorder;
-  color: #555555;
+  color: @btnSecondaryColor;
 }
 
 table.secondary td a {
-  color: #555555;
+  color: @btnSecondaryColor;
 }
 
 table.secondary:hover td {
   background: @btnSecondaryBackgroundHover !important;
-  color: #555555;
+  color: @btnSecondaryColor;
 }
 
 table.secondary:hover td a,
 table.secondary td a:visited,
 table.secondary:active td a {
-  color: #555555 !important;
+  color: @btnSecondaryColor !important;
 }
 
 table.success td {
