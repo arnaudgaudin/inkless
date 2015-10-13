@@ -725,19 +725,43 @@ table.secondary:active td a {
 table.success td {
   background: @btnSuccessBackground;
   border-color: @btnSuccessBorder;
+  color: @btnSuccessColor;
+}
+
+table.success td a {
+  color: @btnSuccessColor; 
 }
 
 table.success:hover td {
   background: @btnSuccessBackgroundHover !important;
+  color: @btnSuccessColor;
+}
+
+table.success:hover td a,
+table.success td a:visited,
+table.success:active td a {
+  color: @btnSuccessColor !important;
 }
 
 table.alert td {
   background: @btnAlertBackground;
   border-color: @btnAlertBorder;
+  color: @btnAlertColor;
+}
+
+table.alert td a {
+  color: @btnAlertColor;
 }
 
 table.alert:hover td {
   background: @btnAlertBackgroundHover !important;
+  color: @btnAlertColor;
+}
+
+table.alert:hover td a,
+table.alert td a:visited,
+table.alert:active td a {
+  color: @btnAlertColor !important;
 }
 
 table.radius td {
