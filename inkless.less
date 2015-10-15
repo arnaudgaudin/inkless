@@ -672,7 +672,8 @@ table.button:active td {
 table.button:hover td a,
 table.button:visited td a,
 table.button:active td a {
-  color: @btnColor !important;
+  color: @btnColor;
+  .important { color: @btnColor !important; }
 }
 
 table.button:hover td,
@@ -698,7 +699,8 @@ table.medium-button td a:visited,
 table.large-button:hover td a,
 table.large-button:active td a,
 table.large-button td a:visited {
-  color: @btnColor !important;
+  color: @btnColor;
+  .important { color: @btnColor !important; }
 }
 
 table.secondary td {
@@ -709,6 +711,7 @@ table.secondary td {
 
 table.secondary td a {
   color: @btnSecondaryColor;
+  .important { color: @btnSecondaryColor !important; }
 }
 
 table.secondary:hover td {
@@ -719,7 +722,8 @@ table.secondary:hover td {
 table.secondary:hover td a,
 table.secondary td a:visited,
 table.secondary:active td a {
-  color: @btnSecondaryColor !important;
+  color: @btnSecondaryColor;
+  .important { color: @btnSecondaryColor !important; }
 }
 
 table.success td {
@@ -729,7 +733,8 @@ table.success td {
 }
 
 table.success td a {
-  color: @btnSuccessColor; 
+  color: @btnSuccessColor;
+  .important { color: @btnSuccessColor !important; }
 }
 
 table.success:hover td {
@@ -740,7 +745,8 @@ table.success:hover td {
 table.success:hover td a,
 table.success td a:visited,
 table.success:active td a {
-  color: @btnSuccessColor !important;
+  color: @btnSuccessColor;
+  .important { color: @btnSuccessColor !important; }
 }
 
 table.alert td {
@@ -751,6 +757,7 @@ table.alert td {
 
 table.alert td a {
   color: @btnAlertColor;
+  .important { color: @btnAlertColor !important; }
 }
 
 table.alert:hover td {
@@ -761,7 +768,8 @@ table.alert:hover td {
 table.alert:hover td a,
 table.alert td a:visited,
 table.alert:active td a {
-  color: @btnAlertColor !important;
+  color: @btnAlertColor;
+  .important { color: @btnAlertColor !important; }
 }
 
 table.radius td {
