@@ -639,7 +639,8 @@ table.large-button td a {
   font-weight: bold;
   text-decoration: none;
   font-family: @baseFontFamily;
-  color: #ffffff;
+  color: @btnColor;
+  .important { color: @btnColor !important; }
   font-size: @buttonFontSizeSmall;
   display: block;
   height: 100%;
@@ -672,8 +673,7 @@ table.button:active td {
 table.button:hover td a,
 table.button:visited td a,
 table.button:active td a {
-  color: @btnColor;
-  .important { color: @btnColor !important; }
+  &, .important { color: @btnColor !important; }
 }
 
 table.button:hover td,
