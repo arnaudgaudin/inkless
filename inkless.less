@@ -532,18 +532,22 @@ small {
 a {
   color: @linkColor;
   text-decoration: none;
+  .important {
+    color: @linkColor !important;
+    text-decoration: none !important;
+  }
 }
 
 a:hover {
-  color: @linkColorHover !important;
+  &, .important { color: @linkColorHover !important; }
 }
 
 a:active {
-  color: @linkColorHover !important;
+  &, .important { color: @linkColorHover !important; }
 }
 
 a:visited {
-  color: @linkColor !important;
+  &, .important { color: @linkColor !important; }
 }
 
 h1 a,
@@ -553,6 +557,7 @@ h4 a,
 h5 a,
 h6 a {
   color: @linkColor;
+  .important { color: @linkColor !important; }
 }
 
 h1 a:active,
@@ -561,7 +566,7 @@ h3 a:active,
 h4 a:active,
 h5 a:active,
 h6 a:active {
-  color: @linkColor !important;
+  &, .important { color: @linkColor !important; }
 }
 
 h1 a:visited,
@@ -570,7 +575,7 @@ h3 a:visited,
 h4 a:visited,
 h5 a:visited,
 h6 a:visited {
-  color: @linkColor !important;
+  &, .important { color: @linkColor !important; }
 }
 
 /* Panels */
